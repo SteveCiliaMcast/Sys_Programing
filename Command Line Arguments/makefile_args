@@ -1,0 +1,10 @@
+all: ArgsApp.exe
+
+ArgsApp.exe: args.c
+	gcc -Wall args.c -o ArgsApp.exe
+
+run: ArgsApp.exe
+	.\ArgsApp.exe $(ARGS)
+
+clean:
+	if exist ArgsApp.exe del /F /Q ArgsApp.exe

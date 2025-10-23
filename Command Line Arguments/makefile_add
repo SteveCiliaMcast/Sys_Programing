@@ -1,0 +1,10 @@
+all: AddApp.exe
+
+AddApp.exe: add.c
+	gcc -Wall add.c -o AddApp.exe
+
+run: AddApp.exe
+	.\AddApp.exe $(NUMBER1) $(NUMBER2)
+
+clean:
+	if exist AddApp.exe del /F /Q AddApp.exe
